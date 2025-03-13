@@ -8,7 +8,6 @@ class CreditCardPayment implements PaymentGateway {
     @Override
     public void processPayment(double amount) {
         System.out.println("Processing credit card payment of $" + amount);
-        // Credit card payment logic
     }
 }
 class PayPalPayment implements PaymentGateway {
@@ -27,15 +26,11 @@ class UpiPayment implements PaymentGateway
        
     }
 }
-
-// Main class to test the payment gateway
 public class PaymentSystem {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Payment Processing System");
-        
-        // Select payment method
         System.out.println("Select payment method: 1. Credit Card 2. PayPal 3. UPI");
         int choice = scanner.nextInt();
 
@@ -63,7 +58,6 @@ public class PaymentSystem {
         payment.processPayment(amount);
         System.out.println("Payment successful!");
 
-        scanner.close();
     }
 }
 
